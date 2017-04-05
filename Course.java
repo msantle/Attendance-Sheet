@@ -23,6 +23,7 @@ public class Course {
 			
 			System.out.println("Is there an acronym for the course (Yes or No): ");
 			String t = in.nextLine();
+			// Maybe ask "Is there an acronym for the course? If yes, enter acronym. If no, enter no." and get it done at the same time instead of asking multiple questions.
 			while (!(t.equalsIgnoreCase("yes") || t.equalsIgnoreCase("no"))){
 				System.out.println("Is there an acronym for the course (Yes or No): ");
 				t = in.nextLine();
@@ -30,7 +31,7 @@ public class Course {
 			if (t.equalsIgnoreCase("yes")){
 				System.out.println("What is the acronym:");
 				t = in.nextLine();
-				setAcronym(t);
+				setCourseID(t);
 			}
 			
 			hmap.put(1, "Monday");
@@ -117,13 +118,14 @@ public class Course {
 	public void setCourseTitle(String courseTitle) {
 		this.courseTitle = courseTitle;
 	}
-
-	public String getAcronym() {
-		return acronym;
+	// Maybe also get/set CourseID (I assume this is what acronym is "IT 101" or "10456")?
+	
+	public String getCourseID() {
+		return courseID;
 	}
 
-	public void setAcronym(String acronym) {
-		this.acronym = acronym;
+	public void setCourseID(String courseID) {
+		this.courseID = courseID;
 	}
 
 	public Student[] getStudents() {
