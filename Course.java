@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class Course {
 	
+	// I am adding some more stuff
+	
+	// Here is my new stuff
+	
 	Scanner in = new Scanner(System.in);
 	
 	private int numberStudents;
